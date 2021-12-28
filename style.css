@@ -10,23 +10,18 @@ body {
   flex-direction: column;
   width: 960px;
   height: 400px;
-  /* border: 1px solid blue; */
+  border: 1px solid blue;
 }
 
 .row {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
-  flex-shrink: 1;
 }
 
 .node {
-  padding: 10px;
-  /* border: 1px solid red; */
+  padding: auto;
   flex-grow: 1;
-  flex-shrink: 1;
+  /* border: 1px solid red; */
 }
 
-.node:hover {
-  background: blue;
-}

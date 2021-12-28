@@ -11,6 +11,12 @@ function createRow(count) {
   for (let i = 0; i < count; i++) {
     const node = document.createElement('div');
     node.classList.add('node');
+
+    node.addEventListener('mouseover', () => {
+      // set background to random color
+      node.style.backgroundColor = 'hsl(' + random(359) + ',100%,50%)';
+    });
+
     newRow.appendChild(node);
   }
   return newRow;
@@ -44,4 +50,9 @@ function removeAllChildNodes(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
   }
+}
+
+// return random number between 0 and int
+function random(i) {
+  return Math.floor(Math.random() * i);
 }
